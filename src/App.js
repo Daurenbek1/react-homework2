@@ -1,5 +1,6 @@
 import './styles/App.scss'
 import { useState } from 'react'
+import { Home } from './pages/Home'
 
 function App() {
 
@@ -27,10 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleNumber}className="button">New numbers</button>
-      <div className="numbers">
-        {numbers.map(number => <span className='number'>{number}</span>)}
-      </div>
+      <Home numbers={numbers} handleNumber={handleNumber}/>
     </div>
   );
 }
